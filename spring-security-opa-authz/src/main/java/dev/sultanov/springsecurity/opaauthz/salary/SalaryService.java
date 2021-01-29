@@ -14,7 +14,7 @@ public class SalaryService {
         this.repository = repository;
     }
 
-    @PreAuthorize("@opaClient.allow('read', T(java.util.Map).of('type', 'salary', 'user', #username))")
+
     public Salary getSalaryByUsername(String username) {
         return repository.findByUsername(username)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));

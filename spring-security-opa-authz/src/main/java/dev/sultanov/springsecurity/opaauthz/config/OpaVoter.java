@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 
 public class OpaVoter implements AccessDecisionVoter<FilterInvocation> {
 
-    private static final String URI = "http://13.212.21.169:8181/v1/data/authz/allow";
+    private static final String URI = "http://localhost:8181/v1/data/authz/allow";
 
     private static final Logger LOG = LoggerFactory.getLogger(OpaVoter.class);
 
